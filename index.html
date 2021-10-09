@@ -1,1 +1,25 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperBlog</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='img/logo.png') }}"
+          type="image/png">
+</head>
+<body>
+    <h1>Blog about Cat Breeds</h1>
+    <p>By {{ author.first}} {{author.last }} </p>
+    <p>Articles: {{ n }}</p>
+    <img class="logo"
+            src="{{ url_for('static', filename='img/logo.png') }}">
+    {% if articles %}
+    ...
+    {% else %}
+    <h2>No articles yet</h2>
+    {% endif %}
+
+</body>
+</html>
